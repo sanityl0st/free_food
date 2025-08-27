@@ -5,7 +5,6 @@ import {
   IdCard,
   AlertTriangle,
   Dumbbell,
-  BookOpen,
   Link,
   LogOut,
   Info,
