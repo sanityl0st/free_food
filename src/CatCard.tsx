@@ -15,6 +15,9 @@ interface CardButtonProps {
   label: string;
 }
 
+
+const BASE_URL = import.meta.env.BASE_URL;
+
 export default function CatCard() {
   const [showBarcode, setShowBarcode] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(100);
@@ -43,13 +46,13 @@ export default function CatCard() {
         {/* Header with logos */}
         <div className="flex flex-row w-full max-w-sm p-2">
             <img
-              src="/ucm3.png"
+              src={BASE_URL + "Images/ucm3.png"}
               alt="UC Merced Logo"
               className="h-14 object-contain ml-3"
             />
 
           <img
-            src="/mobileid_logo.png"
+            src={BASE_URL + "Images/mobileid_logo.png"}
             alt="CatCard Logo"
             className="items-center h-15 object-contain ml-10"
           />
@@ -64,7 +67,7 @@ export default function CatCard() {
           {/* Profile */}
           <div className="w-28 h-28 rounded-full bg-gray-600 mb-2 overflow-hidden">
             <img
-              src="/photo.jfif"
+              src={BASE_URL + "Images/photo.jfif"}
               alt="Profile"
               className="w-full h-full object-cover"
             />
@@ -88,7 +91,7 @@ export default function CatCard() {
 
 
               <img
-                src="/barcode.jpg"
+                src={BASE_URL + "Images/barcode.jpg"}
                 alt="Barcode"
                 className="w-64 h-14 object-contain mb-2"
               />
